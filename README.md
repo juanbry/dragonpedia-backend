@@ -7,13 +7,13 @@ Este repositorio contiene la API RESTful que sirve datos a la aplicación de Dra
 - **JSON Server:** Utilizado para simular una API RESTful y una base de datos para desarrollo y producción.
 
 ### Endpoints de la API
-La API se puede consumir desde los siguientes endpoints:
-- `[URL_DE_RENDER]/characters`: Para obtener y buscar personajes.
-- `[URL_DE_RENDER]/comments`: Para gestionar los comentarios.
-  (Reemplaza `[URL_DE_RENDER]` con la URL de tu despliegue en Render, por ejemplo: `https://dragonpedia-backend.onrender.com/`).
+La API se puede consumir desde la siguiente URL base:
+- **URL Base:** `https://dragonpedia-backend.onrender.com`
 
-### Cómo Iniciar el Proyecto (Local)
-1.  Clona este repositorio: `git clone https://github.com/juanbry/dragonpedia-backend.git`
-2.  Navega a la carpeta del proyecto: `cd dragonpedia-backend`
-3.  Instala las dependencias: `npm install`
-4.  Inicia el servidor: `npm start`
+**Endpoints Disponibles:**
+- `GET /characters`: Obtiene la lista completa de personajes.
+- `GET /characters?q=[query]`: Permite buscar personajes por nombre.
+- `GET /comments?characterId=[id]`: Obtiene todos los comentarios para un personaje específico.
+- `POST /comments`: Crea un nuevo comentario.
+- `PUT /comments/[id]`: Actualiza un comentario existente.
+- `DELETE /comments/[id]`: Elimina un comentario.
